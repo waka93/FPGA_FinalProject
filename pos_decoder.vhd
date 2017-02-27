@@ -23,17 +23,19 @@ end entity;
 architecture pos_gen of pos_decoder is
 
 begin
+pos_y1 <= 0;
+pos_y2 <= 480;
+
 process(reset, clk, scan_ready)
-variable delta1 : integer :=0;
-variable delta2 : integer :=0;
+variable delta1 : integer :=1;
+variable delta2 : integer :=1;
 variable sig_pos_x1 : integer :=0;
 variable sig_pos_y1 : integer :=0;
 variable sig_pos_x2 : integer :=0;
 variable sig_pos_y2 : integer :=0;
 
 begin
-	pos_x1 <=0;	
-	pos_x2 <=0;
+		
 	if (rising_edge(clk)) then
 		if (rising_edge(scan_ready)) then
 			if (reset = '1') then
@@ -41,9 +43,8 @@ begin
 			sig_pos_y1 := 0;
 			sig_pos_x2 := 0;
 			sig_pos_y2 := 480;
-			
-			else
-				case scan_code is --speed decoder
+			else			
+				case scan_code is 
 					when slow1 =>  --tank1 slow 1
 						delta1 := 1;
 					when med1 =>  --med 2
@@ -56,14 +57,9 @@ begin
 						delta2 := 50;
 					when fast2 =>  --fast 9
 						delta2 := 100;
-					when others =>
-						delta1 := 1;
-						delta2 := 1;
-				end case;
-				case scan_code is -- position decoder
-					when right1 => --tank1 right d
+					when right1 => 
 						sig_pos_x1 := sig_pos_x1 + delta1;
-					when left1 =>--left a
+					when left1 =>
 						sig_pos_x1 := sig_pos_x1 - delta1;
 					when right2 =>
 						sig_pos_x2 := sig_pos_x2 + delta2;
@@ -73,6 +69,9 @@ begin
 						sig_pos_x1 := sig_pos_x1 + 0;
 						sig_pos_x2 := sig_pos_x2 + 0;
 				end case;
+				-- case scan_code is -- position decoder
+					
+				-- end case;
 				pos_x1 <= sig_pos_x1;
 				pos_x2 <= sig_pos_x2;
 			end if;
