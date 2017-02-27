@@ -7,9 +7,9 @@ entity game_top is
 	port( reset : in std_logic;
 			
 			--keyboard clock
-			keyboard_clk, keyboard_data, clock_50MHz ,
+			keyboard_clk, keyboard_data, clock_50MHz : in std_logic;
 			--VGA clock
-			CLOCK_50 : in std_logic;--RESET_N	: in std_logic;
+			--CLOCK_50 --RESET_N	: in std_logic;
 	
 			--VGA output
 			VGA_RED, VGA_GREEN, VGA_BLUE 					   : out std_logic_vector(9 downto 0); 
@@ -136,7 +136,7 @@ p2: pos_decoder port map (
 			);
 
 p3: VGA_top_level port map (
-				CLOCK_50 => CLOCK_50,
+				CLOCK_50 => clock_50MHz,
 				RESET_N =>reset ,
 				pos_x1 => pos_x1,
 				pos_y1 => pos_y1,

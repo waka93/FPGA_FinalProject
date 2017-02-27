@@ -8,7 +8,7 @@ use work.tank_pos_const.all;
 
 entity pos_decoder is
 	port(	clk : in std_logic;
-		    reset : in std_logic;
+		   reset : in std_logic;
 			scan_code : in std_logic_vector(7 downto 0);
 			scan_ready : in std_logic;
 						
@@ -22,68 +22,51 @@ end entity;
 
 architecture pos_gen of pos_decoder is
 
-begin
-pos_y1 <= 0;
-pos_y2 <= 480;
 
-process(reset, clk, scan_ready)
-variable delta1 : integer :=1;
-variable delta2 : integer :=1;
-variable sig_pos_x1 : integer :=0;
-variable sig_pos_y1 : integer :=0;
-variable sig_pos_x2 : integer :=0;
-variable sig_pos_y2 : integer :=0;
+signal sig_pos_x1 : integer :=0;
+signal sig_pos_y1 : integer :=0;
+signal sig_pos_x2 : integer :=0;
+signal sig_pos_y2 : integer :=0;
+
+
 
 begin
-		
-	if (rising_edge(clk)) then
+
+pos_y1 <= sig_pos_y1;
+pos_y2 <= sig_pos_y2;
+pos_x1 <= sig_pos_x1;
+pos_x2 <= sig_pos_x2;
+
+dcd : process(scan_ready) is
+variable temp	: integer :=0;
+variable delta1: integer :=1;
+variable delta2: integer :=1;
+
+  begin
 		if (rising_edge(scan_ready)) then
-			if (reset = '1') then
-			sig_pos_x1 := 0;
-			sig_pos_y1 := 0;
-			sig_pos_x2 := 0;
-			sig_pos_y2 := 480;
-			else			
-				case scan_code is 
-					when slow1 =>  --tank1 slow 1
+			case scan_code is 
+					when slow1 =>
 						delta1 := 1;
-					when med1 =>  --med 2
-						delta1 := 50;
-					when fast1 =>  --fast 3
-						delta1 := 100;					
-					when slow2 => --tank2 slow 7
-						delta2 := 1;
-					when med2 =>  -- med 8
-						delta2 := 50;
-					when fast2 =>  --fast 9
-						delta2 := 100;
+					when med1 =>
+						delta1 := 3;
+					when fast1 =>
+						delta1 := 6;
 					when right1 => 
-						sig_pos_x1 := sig_pos_x1 + delta1;
-					when left1 =>
-						sig_pos_x1 := sig_pos_x1 - delta1;
-					when right2 =>
-						sig_pos_x2 := sig_pos_x2 + delta2;
-					when left2 =>
-						sig_pos_x2 := sig_pos_x2 - delta2;
+						temp := sig_pos_x1;
+						sig_pos_x1 <= temp + delta1;
+					when left1  => 
+						temp := sig_pos_x1;
+						sig_pos_x1 <= temp - delta1;
 					when others =>
-						sig_pos_x1 := sig_pos_x1 + 0;
-						sig_pos_x2 := sig_pos_x2 + 0;
-				end case;
-				-- case scan_code is -- position decoder
-					
-				-- end case;
-				pos_x1 <= sig_pos_x1;
-				pos_x2 <= sig_pos_x2;
-			end if;
-		-- else		
-			-- pos_x1 <= 0;
-			-- pos_y1 <= 0;
-			-- pos_x2 <= 0;
-			-- pos_y2 <= 0;
+						temp := sig_pos_x1;
+						sig_pos_x1 <= temp + 0;
+			end case;
 		end if;
-	end if;
-end process;
-end pos_gen;
+end process dcd;
+
+
+
+end architecture pos_gen;
 
 		
 

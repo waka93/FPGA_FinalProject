@@ -67,4 +67,108 @@ set_global_assignment -name VHDL_FILE pos_decoder.vhd
 set_global_assignment -name VHDL_FILE game_top.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_C13 -to VERT_SYNC
+set_location_assignment PIN_F11 -to VGA_BLANK
+set_location_assignment PIN_D12 -to VGA_BLUE[7]
+set_location_assignment PIN_D11 -to VGA_BLUE[6]
+set_location_assignment PIN_C12 -to VGA_BLUE[5]
+set_location_assignment PIN_A11 -to VGA_BLUE[4]
+set_location_assignment PIN_B11 -to VGA_BLUE[3]
+set_location_assignment PIN_C11 -to VGA_BLUE[2]
+set_location_assignment PIN_A10 -to VGA_BLUE[1]
+set_location_assignment PIN_B10 -to VGA_BLUE[0]
+set_location_assignment PIN_A12 -to VGA_CLK
+set_location_assignment PIN_C9 -to VGA_GREEN[7]
+set_location_assignment PIN_F10 -to VGA_GREEN[6]
+set_location_assignment PIN_B8 -to VGA_GREEN[5]
+set_location_assignment PIN_C8 -to VGA_GREEN[4]
+set_location_assignment PIN_H12 -to VGA_GREEN[3]
+set_location_assignment PIN_F8 -to VGA_GREEN[2]
+set_location_assignment PIN_G11 -to VGA_GREEN[1]
+set_location_assignment PIN_G8 -to VGA_GREEN[0]
+set_location_assignment PIN_H10 -to VGA_RED[7]
+set_location_assignment PIN_H8 -to VGA_RED[6]
+set_location_assignment PIN_J12 -to VGA_RED[5]
+set_location_assignment PIN_G10 -to VGA_RED[4]
+set_location_assignment PIN_F12 -to VGA_RED[3]
+set_location_assignment PIN_D10 -to VGA_RED[2]
+set_location_assignment PIN_E11 -to VGA_RED[1]
+set_location_assignment PIN_E12 -to VGA_RED[0]
+set_location_assignment PIN_Y2 -to CLOCK_50
+set_location_assignment PIN_G13 -to HORIZ_SYNC
+set_location_assignment PIN_M23 -to RESET_N
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity VGA_top_level -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity VGA_top_level -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity VGA_top_level -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity VGA_top_level -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ps2 -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity ps2 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -entity ps2 -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity ps2 -section_id "Root Region"
+set_location_assignment PIN_G18 -to HEX0[0]
+set_location_assignment PIN_F22 -to HEX0[1]
+set_location_assignment PIN_E17 -to HEX0[2]
+set_location_assignment PIN_L26 -to HEX0[3]
+set_location_assignment PIN_L25 -to HEX0[4]
+set_location_assignment PIN_J22 -to HEX0[5]
+set_location_assignment PIN_H22 -to HEX0[6]
+set_location_assignment PIN_M24 -to HEX1[0]
+set_location_assignment PIN_Y22 -to HEX1[1]
+set_location_assignment PIN_W21 -to HEX1[2]
+set_location_assignment PIN_W22 -to HEX1[3]
+set_location_assignment PIN_W25 -to HEX1[4]
+set_location_assignment PIN_U23 -to HEX1[5]
+set_location_assignment PIN_U24 -to HEX1[6]
+set_location_assignment PIN_AA25 -to HEX2[0]
+set_location_assignment PIN_AA26 -to HEX2[1]
+set_location_assignment PIN_Y25 -to HEX2[2]
+set_location_assignment PIN_W26 -to HEX2[3]
+set_location_assignment PIN_Y26 -to HEX2[4]
+set_location_assignment PIN_W27 -to HEX2[5]
+set_location_assignment PIN_W28 -to HEX2[6]
+set_location_assignment PIN_V21 -to HEX3[0]
+set_location_assignment PIN_U21 -to HEX3[1]
+set_location_assignment PIN_AB20 -to HEX3[2]
+set_location_assignment PIN_AA21 -to HEX3[3]
+set_location_assignment PIN_AD24 -to HEX3[4]
+set_location_assignment PIN_AF23 -to HEX3[5]
+set_location_assignment PIN_Y19 -to HEX3[6]
+set_location_assignment PIN_AB19 -to HEX4[0]
+set_location_assignment PIN_AA19 -to HEX4[1]
+set_location_assignment PIN_AG21 -to HEX4[2]
+set_location_assignment PIN_AH21 -to HEX4[3]
+set_location_assignment PIN_AE19 -to HEX4[4]
+set_location_assignment PIN_AF19 -to HEX4[5]
+set_location_assignment PIN_AE18 -to HEX4[6]
+set_location_assignment PIN_AD18 -to HEX5[0]
+set_location_assignment PIN_AC18 -to HEX5[1]
+set_location_assignment PIN_AB18 -to HEX5[2]
+set_location_assignment PIN_AH19 -to HEX5[3]
+set_location_assignment PIN_AG19 -to HEX5[4]
+set_location_assignment PIN_AF18 -to HEX5[5]
+set_location_assignment PIN_AH18 -to HEX5[6]
+set_location_assignment PIN_AA17 -to HEX6[0]
+set_location_assignment PIN_AB16 -to HEX6[1]
+set_location_assignment PIN_AA16 -to HEX6[2]
+set_location_assignment PIN_AB17 -to HEX6[3]
+set_location_assignment PIN_AB15 -to HEX6[4]
+set_location_assignment PIN_AA15 -to HEX6[5]
+set_location_assignment PIN_AC17 -to HEX6[6]
+set_location_assignment PIN_AD17 -to HEX7[0]
+set_location_assignment PIN_AE17 -to HEX7[1]
+set_location_assignment PIN_AG17 -to HEX7[2]
+set_location_assignment PIN_AH17 -to HEX7[3]
+set_location_assignment PIN_AF17 -to HEX7[4]
+set_location_assignment PIN_AG18 -to HEX7[5]
+set_location_assignment PIN_AA14 -to HEX7[6]
+set_location_assignment PIN_Y2 -to clock_50MHz
+set_location_assignment PIN_G6 -to keyboard_clk
+set_location_assignment PIN_H5 -to keyboard_data
+set_location_assignment PIN_G26 -to read
+set_location_assignment PIN_M23 -to reset
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ps2 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ps2 -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain5.cdf
+set_global_assignment -name CDF_FILE output_files/Chain6.cdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
