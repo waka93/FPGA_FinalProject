@@ -3,7 +3,7 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
-
+-- zz
 use work.tank_pos_const.all;
 
 entity pos_decoder is
