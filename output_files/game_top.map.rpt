@@ -1,0 +1,247 @@
+Analysis & Synthesis report for game_top
+Sun Feb 26 18:45:55 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sun Feb 26 18:45:55 2017           ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; game_top                                    ;
+; Top-level Entity Name              ; game_top                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; game_top           ; game_top           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sun Feb 26 18:45:46 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off game_top -c game_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file vga/vga_top_level.vhd
+    Info (12022): Found design unit 1: VGA_top_level-structural File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/VGA_top_level.vhd Line: 18
+    Info (12023): Found entity 1: VGA_top_level File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/VGA_top_level.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file vga/vga_sync.vhd
+    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/vga_sync.vhd Line: 16
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/vga_sync.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file vga/pixelgenerator.vhd
+    Info (12022): Found design unit 1: pixelGenerator-behavioral File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/pixelGenerator.vhd Line: 16
+    Info (12023): Found entity 1: pixelGenerator File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/pixelGenerator.vhd Line: 7
+Info (12021): Found 2 design units, including 0 entities, in source file vga/graphic_const.vhd
+    Info (12022): Found design unit 1: graphic_const File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/graphic_const.vhd Line: 6
+    Info (12022): Found design unit 2: graphic_const-body File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/graphic_const.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file vga/colorrom.vhd
+    Info (12022): Found design unit 1: colorrom-SYN File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/colorROM.vhd Line: 52
+    Info (12023): Found entity 1: colorROM File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/colorROM.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/ps2.vhd
+    Info (12022): Found design unit 1: ps2-structural File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 31
+    Info (12023): Found entity 1: ps2 File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/oneshot.vhd
+    Info (12022): Found design unit 1: oneshot-dd File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/oneshot.vhd Line: 14
+    Info (12023): Found entity 1: oneshot File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/oneshot.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/leddcd.vhd
+    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/leddcd.vhd Line: 12
+    Info (12023): Found entity 1: leddcd File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/leddcd.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/keyboard.vhd
+    Info (12022): Found design unit 1: keyboard-a File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/keyboard.vhd Line: 14
+    Info (12023): Found entity 1: keyboard File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/keyboard.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file lcd/de2lcd.vhd
+    Info (12022): Found design unit 1: de2lcd-a File: C:/Users/Ziheng/Documents/EECS355/finalproject/LCD/de2lcd.vhd Line: 13
+    Info (12023): Found entity 1: de2lcd File: C:/Users/Ziheng/Documents/EECS355/finalproject/LCD/de2lcd.vhd Line: 6
+Info (12021): Found 1 design units, including 0 entities, in source file tank_pos_const.vhd
+    Info (12022): Found design unit 1: tank_pos_const File: C:/Users/Ziheng/Documents/EECS355/finalproject/tank_pos_const.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pos_decoder.vhd
+    Info (12022): Found design unit 1: pos_decoder-pos_gen File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 23
+    Info (12023): Found entity 1: pos_decoder File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file game_top.vhd
+    Info (12022): Found design unit 1: game_top-structural File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 29
+    Info (12023): Found entity 1: game_top File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 6
+Info (12127): Elaborating entity "game_top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(34): object "hist3" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(35): object "hist2" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(36): object "hist1" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(37): object "hist0" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 37
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:p1" File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 101
+Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:p1|keyboard:u1" File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 64
+Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:p1|oneshot:pulser" File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 74
+Info (12128): Elaborating entity "leddcd" for hierarchy "ps2:p1|leddcd:lcddcd0" File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 83
+Info (12128): Elaborating entity "pos_decoder" for hierarchy "pos_decoder:p2" File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 125
+Warning (10541): VHDL Signal Declaration warning at pos_decoder.vhd(16): used implicit default value for signal "pos_y1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 16
+Warning (10541): VHDL Signal Declaration warning at pos_decoder.vhd(18): used implicit default value for signal "pos_y2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 18
+Warning (10036): Verilog HDL or VHDL warning at pos_decoder.vhd(30): object "sig_pos_y1" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at pos_decoder.vhd(32): object "sig_pos_y2" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 32
+Error (10818): Can't infer register for "pos_x2[0]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[0]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[1]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[1]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[2]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[2]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[3]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[3]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[4]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[4]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[5]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[5]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[6]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[6]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[7]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[7]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[8]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (10818): Can't infer register for "pos_x2[8]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
+Error (10818): Can't infer register for "pos_x2[9]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
+Error (12152): Can't elaborate user hierarchy "pos_decoder:p2" File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 125
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 9 warnings
+    Error: Peak virtual memory: 673 megabytes
+    Error: Processing ended: Sun Feb 26 18:45:55 2017
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:21
+
+
