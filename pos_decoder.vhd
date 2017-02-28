@@ -26,7 +26,7 @@ architecture pos_gen of pos_decoder is
 signal sig_pos_x1 : integer :=0;
 signal sig_pos_y1 : integer :=0;
 signal sig_pos_x2 : integer :=0;
-signal sig_pos_y2 : integer :=0;
+signal sig_pos_y2 : integer :=420;
 
 
 

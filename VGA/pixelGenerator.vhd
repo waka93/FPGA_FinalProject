@@ -61,9 +61,26 @@ begin
 	begin
 			
 		if (rising_edge(clk)) then
+		--	tank 1
 			if(pixel_column_int > pos_x1  and pixel_column_int < (pos_x1 + TANK_WIDTH) and 
 				pixel_row_int < pos_y1 + TANK_HEIGHT) then
-				colorAddress <= color_black;
+				colorAddress <= color_red;
+			elsif(pixel_column_int > pos_x1 and (pixel_column_int + 640) < (pos_x1 + TANK_WIDTH) and
+				pixel_row_int < pos_y1 + TANK_HEIGHT) then
+				colorAddress <= color_red;
+			
+		--	tank 2
+			elsif(pixel_column_int > pos_x2 and pixel_column_int < (pos_x2 + TANK_WIDTH) and 
+				pixel_row_int > pos_y2) then
+				colorAddress <= color_blue;
+			elsif(pixel_column_int > pos_x2 and (pixel_column_int + 640) < (pos_x2 + TANK_WIDTH) and
+				pixel_row_int > pos_y2) then
+				colorAddress <= color_blue;	
+				
+		--	bullet 1
+			elsif()
+		
+		
 --			if (pixel_row_int < 240 and pixel_column_int < 320) then
 --				colorAddress <= color_green;
 --			elsif (pixel_row_int >= 240 and pixel_column_int < 320) then
