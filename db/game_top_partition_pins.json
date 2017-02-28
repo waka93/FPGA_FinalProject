@@ -1,0 +1,385 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_RED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_RED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN[9]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HORIZ_SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "VERT_SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50MHz",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "keyboard_data",
+					"strict" : false
+				},
+				{
+					"name" : "keyboard_clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

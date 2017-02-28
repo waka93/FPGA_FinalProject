@@ -1,5 +1,5 @@
 Analysis & Synthesis report for game_top
-Sun Feb 26 18:45:55 2017
+Mon Feb 27 12:20:53 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -10,7 +10,21 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated
+ 14. Parameter Settings for User Entity Instance: VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "ps2:p1"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +51,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Feb 26 18:45:55 2017           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 27 12:20:53 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; game_top                                    ;
 ; Top-level Entity Name              ; game_top                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 324                                         ;
+;     Total combinational functions  ; 247                                         ;
+;     Dedicated logic registers      ; 148                                         ;
+; Total registers                    ; 148                                         ;
+; Total pins                         ; 94                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 60                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -149,11 +163,299 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; VGA/VGA_top_level.vhd            ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/VGA_top_level.vhd     ;         ;
+; VGA/vga_sync.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/vga_sync.vhd          ;         ;
+; VGA/pixelGenerator.vhd           ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/pixelGenerator.vhd    ;         ;
+; VGA/graphic_const.vhd            ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/graphic_const.vhd     ;         ;
+; VGA/colorROM.vhd                 ; yes             ; User Wizard-Generated File   ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/colorROM.vhd          ;         ;
+; PS2/ps2.vhd                      ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/ps2.vhd               ;         ;
+; PS2/oneshot.vhd                  ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/oneshot.vhd           ;         ;
+; PS2/leddcd.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/leddcd.vhd            ;         ;
+; PS2/keyboard.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/keyboard.vhd          ;         ;
+; tank_pos_const.vhd               ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/tank_pos_const.vhd        ;         ;
+; pos_decoder.vhd                  ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/pos_decoder.vhd           ;         ;
+; game_top.vhd                     ; yes             ; User VHDL File               ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd              ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_b481.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/db/altsyncram_b481.tdf    ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                       ;
++---------------------------------------------+-----------------------------------------------------+
+; Resource                                    ; Usage                                               ;
++---------------------------------------------+-----------------------------------------------------+
+; Estimated Total logic elements              ; 324                                                 ;
+;                                             ;                                                     ;
+; Total combinational functions               ; 247                                                 ;
+; Logic element usage by number of LUT inputs ;                                                     ;
+;     -- 4 input functions                    ; 115                                                 ;
+;     -- 3 input functions                    ; 65                                                  ;
+;     -- <=2 input functions                  ; 67                                                  ;
+;                                             ;                                                     ;
+; Logic elements by mode                      ;                                                     ;
+;     -- normal mode                          ; 153                                                 ;
+;     -- arithmetic mode                      ; 94                                                  ;
+;                                             ;                                                     ;
+; Total registers                             ; 148                                                 ;
+;     -- Dedicated logic registers            ; 148                                                 ;
+;     -- I/O registers                        ; 0                                                   ;
+;                                             ;                                                     ;
+; I/O pins                                    ; 94                                                  ;
+; Total memory bits                           ; 60                                                  ;
+;                                             ;                                                     ;
+; Embedded Multiplier 9-bit elements          ; 0                                                   ;
+;                                             ;                                                     ;
+; Maximum fan-out node                        ; VGA_top_level:p3|VGA_SYNC:videoSync|pixel_clock_int ;
+; Maximum fan-out                             ; 75                                                  ;
+; Total fan-out                               ; 1407                                                ;
+; Average fan-out                             ; 2.30                                                ;
++---------------------------------------------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                             ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Entity Name     ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |game_top                                       ; 247 (0)             ; 148 (0)                   ; 60          ; 0            ; 0       ; 0         ; 94   ; 0            ; |game_top                                                                                                                         ; game_top        ; work         ;
+;    |VGA_top_level:p3|                           ; 124 (0)             ; 45 (0)                    ; 60          ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|VGA_top_level:p3                                                                                                        ; VGA_top_level   ; work         ;
+;       |VGA_SYNC:videoSync|                      ; 59 (59)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|VGA_top_level:p3|VGA_SYNC:videoSync                                                                                     ; VGA_SYNC        ; work         ;
+;       |pixelGenerator:videoGen|                 ; 65 (65)             ; 1 (1)                     ; 60          ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|VGA_top_level:p3|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
+;          |colorROM:colors|                      ; 0 (0)               ; 0 (0)                     ; 60          ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors                                                                ; colorROM        ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 60          ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;                |altsyncram_b481:auto_generated| ; 0 (0)               ; 0 (0)                     ; 60          ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated ; altsyncram_b481 ; work         ;
+;    |pos_decoder:p2|                             ; 47 (47)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|pos_decoder:p2                                                                                                          ; pos_decoder     ; work         ;
+;    |ps2:p1|                                     ; 76 (0)              ; 68 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1                                                                                                                  ; ps2             ; work         ;
+;       |keyboard:u1|                             ; 18 (18)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|keyboard:u1                                                                                                      ; keyboard        ; work         ;
+;       |leddcd:lcddcd0|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd0                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd1|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd1                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd2|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd2                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd3|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd3                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd4|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd4                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd5|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd5                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd6|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd6                                                                                                   ; leddcd          ; work         ;
+;       |leddcd:lcddcd7|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|leddcd:lcddcd7                                                                                                   ; leddcd          ; work         ;
+;       |oneshot:pulser|                          ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |game_top|ps2:p1|oneshot:pulser                                                                                                   ; oneshot         ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                   ;
++------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+; Name                                                                                                                               ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF          ;
++------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+; VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8            ; 30           ; --           ; --           ; 240  ; colorROM.mif ;
++------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++------------------------------------------------------------+--------------------------------------------+
+; Register name                                              ; Reason for Removal                         ;
++------------------------------------------------------------+--------------------------------------------+
+; VGA_top_level:p3|pixelGenerator:videoGen|colorAddress[1,2] ; Stuck at VCC due to stuck port data_in     ;
+; pos_decoder:p2|\dcd:delta1[3..9,11..31]                    ; Merged with pos_decoder:p2|\dcd:delta1[10] ;
+; VGA_top_level:p3|VGA_SYNC:videoSync|pixel_row[0,1]         ; Lost fanout                                ;
+; VGA_top_level:p3|VGA_SYNC:videoSync|pixel_row[9]           ; Stuck at GND due to stuck port data_in     ;
+; pos_decoder:p2|\dcd:delta1[10]                             ; Stuck at GND due to stuck port data_in     ;
+; Total Number of Removed Registers = 34                     ;                                            ;
++------------------------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 148   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 83    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; pos_decoder:p2|\dcd:delta1[0]          ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |game_top|VGA_top_level:p3|VGA_SYNC:videoSync|v_count[7] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |game_top|ps2:p1|keyboard:u1|INCNT[3]                    ;
+; 128:1              ; 32 bits   ; 2720 LEs      ; 0 LEs                ; 2720 LEs               ; Yes        ; |game_top|pos_decoder:p2|sig_pos_x1[17]                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                               ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                      ;
++------------------------------------+----------------------+---------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                   ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                                   ;
+; WIDTH_A                            ; 30                   ; Signed Integer                                                            ;
+; WIDTHAD_A                          ; 3                    ; Signed Integer                                                            ;
+; NUMWORDS_A                         ; 8                    ; Signed Integer                                                            ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                   ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                   ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                   ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                   ;
+; INIT_FILE                          ; colorROM.mif         ; Untyped                                                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                   ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                                   ;
+; CBXI_PARAMETER                     ; altsyncram_b481      ; Untyped                                                                   ;
++------------------------------------+----------------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                     ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                    ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                        ;
+; Entity Instance                           ; VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                      ;
+;     -- WIDTH_A                            ; 30                                                                                       ;
+;     -- NUMWORDS_A                         ; 8                                                                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                             ;
+;     -- WIDTH_B                            ; 1                                                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ps2:p1"                                                                              ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; hist3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hist2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hist1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hist0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 94                          ;
+; cycloneiii_ff         ; 148                         ;
+;     CLR               ; 1                           ;
+;     ENA               ; 83                          ;
+;     plain             ; 64                          ;
+; cycloneiii_lcell_comb ; 263                         ;
+;     arith             ; 94                          ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 50                          ;
+;     normal            ; 169                         ;
+;         1 data inputs ; 21                          ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 115                         ;
+; cycloneiii_ram_block  ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.90                        ;
+; Average LUT depth     ; 3.49                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,86 +464,98 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Feb 26 18:45:46 2017
+    Info: Processing started: Mon Feb 27 12:20:40 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off game_top -c game_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vga/vga_top_level.vhd
-    Info (12022): Found design unit 1: VGA_top_level-structural File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/VGA_top_level.vhd Line: 18
-    Info (12023): Found entity 1: VGA_top_level File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/VGA_top_level.vhd Line: 6
+    Info (12022): Found design unit 1: VGA_top_level-structural File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/VGA_top_level.vhd Line: 18
+    Info (12023): Found entity 1: VGA_top_level File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/VGA_top_level.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file vga/vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/vga_sync.vhd Line: 16
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/vga_sync.vhd Line: 16
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file vga/pixelgenerator.vhd
-    Info (12022): Found design unit 1: pixelGenerator-behavioral File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/pixelGenerator.vhd Line: 16
-    Info (12023): Found entity 1: pixelGenerator File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/pixelGenerator.vhd Line: 7
+    Info (12022): Found design unit 1: pixelGenerator-behavioral File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/pixelGenerator.vhd Line: 16
+    Info (12023): Found entity 1: pixelGenerator File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/pixelGenerator.vhd Line: 7
 Info (12021): Found 2 design units, including 0 entities, in source file vga/graphic_const.vhd
-    Info (12022): Found design unit 1: graphic_const File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/graphic_const.vhd Line: 6
-    Info (12022): Found design unit 2: graphic_const-body File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/graphic_const.vhd Line: 18
+    Info (12022): Found design unit 1: graphic_const File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/graphic_const.vhd Line: 6
+    Info (12022): Found design unit 2: graphic_const-body File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/graphic_const.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file vga/colorrom.vhd
-    Info (12022): Found design unit 1: colorrom-SYN File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/colorROM.vhd Line: 52
-    Info (12023): Found entity 1: colorROM File: C:/Users/Ziheng/Documents/EECS355/finalproject/VGA/colorROM.vhd Line: 42
+    Info (12022): Found design unit 1: colorrom-SYN File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/colorROM.vhd Line: 52
+    Info (12023): Found entity 1: colorROM File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/colorROM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file ps2/ps2.vhd
-    Info (12022): Found design unit 1: ps2-structural File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 31
-    Info (12023): Found entity 1: ps2 File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 6
+    Info (12022): Found design unit 1: ps2-structural File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/ps2.vhd Line: 31
+    Info (12023): Found entity 1: ps2 File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/ps2.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ps2/oneshot.vhd
-    Info (12022): Found design unit 1: oneshot-dd File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/oneshot.vhd Line: 14
-    Info (12023): Found entity 1: oneshot File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/oneshot.vhd Line: 6
+    Info (12022): Found design unit 1: oneshot-dd File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/oneshot.vhd Line: 14
+    Info (12023): Found entity 1: oneshot File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/oneshot.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ps2/leddcd.vhd
-    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/leddcd.vhd Line: 12
-    Info (12023): Found entity 1: leddcd File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/leddcd.vhd Line: 5
+    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/leddcd.vhd Line: 12
+    Info (12023): Found entity 1: leddcd File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/leddcd.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ps2/keyboard.vhd
-    Info (12022): Found design unit 1: keyboard-a File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/keyboard.vhd Line: 14
-    Info (12023): Found entity 1: keyboard File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/keyboard.vhd Line: 6
+    Info (12022): Found design unit 1: keyboard-a File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/keyboard.vhd Line: 14
+    Info (12023): Found entity 1: keyboard File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/keyboard.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lcd/de2lcd.vhd
-    Info (12022): Found design unit 1: de2lcd-a File: C:/Users/Ziheng/Documents/EECS355/finalproject/LCD/de2lcd.vhd Line: 13
-    Info (12023): Found entity 1: de2lcd File: C:/Users/Ziheng/Documents/EECS355/finalproject/LCD/de2lcd.vhd Line: 6
+    Info (12022): Found design unit 1: de2lcd-a File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/LCD/de2lcd.vhd Line: 13
+    Info (12023): Found entity 1: de2lcd File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/LCD/de2lcd.vhd Line: 6
 Info (12021): Found 1 design units, including 0 entities, in source file tank_pos_const.vhd
-    Info (12022): Found design unit 1: tank_pos_const File: C:/Users/Ziheng/Documents/EECS355/finalproject/tank_pos_const.vhd Line: 4
+    Info (12022): Found design unit 1: tank_pos_const File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/tank_pos_const.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file pos_decoder.vhd
-    Info (12022): Found design unit 1: pos_decoder-pos_gen File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 23
-    Info (12023): Found entity 1: pos_decoder File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 9
+    Info (12022): Found design unit 1: pos_decoder-pos_gen File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/pos_decoder.vhd Line: 23
+    Info (12023): Found entity 1: pos_decoder File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/pos_decoder.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file game_top.vhd
-    Info (12022): Found design unit 1: game_top-structural File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 29
-    Info (12023): Found entity 1: game_top File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 6
+    Info (12022): Found design unit 1: game_top-structural File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 29
+    Info (12023): Found entity 1: game_top File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 6
 Info (12127): Elaborating entity "game_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(34): object "hist3" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(35): object "hist2" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 35
-Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(36): object "hist1" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 36
-Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(37): object "hist0" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 37
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:p1" File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 101
-Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:p1|keyboard:u1" File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 64
-Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:p1|oneshot:pulser" File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 74
-Info (12128): Elaborating entity "leddcd" for hierarchy "ps2:p1|leddcd:lcddcd0" File: C:/Users/Ziheng/Documents/EECS355/finalproject/PS2/ps2.vhd Line: 83
-Info (12128): Elaborating entity "pos_decoder" for hierarchy "pos_decoder:p2" File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 125
-Warning (10541): VHDL Signal Declaration warning at pos_decoder.vhd(16): used implicit default value for signal "pos_y1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at pos_decoder.vhd(18): used implicit default value for signal "pos_y2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at pos_decoder.vhd(30): object "sig_pos_y1" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 30
-Warning (10036): Verilog HDL or VHDL warning at pos_decoder.vhd(32): object "sig_pos_y2" assigned a value but never read File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 32
-Error (10818): Can't infer register for "pos_x2[0]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[0]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[1]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[1]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[2]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[2]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[3]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[3]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[4]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[4]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[5]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[5]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[6]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[6]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[7]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[7]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[8]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (10818): Can't infer register for "pos_x2[8]" at pos_decoder.vhd(37) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 37
-Error (10818): Can't infer register for "pos_x2[9]" at pos_decoder.vhd(38) because it does not hold its value outside the clock edge File: C:/Users/Ziheng/Documents/EECS355/finalproject/pos_decoder.vhd Line: 38
-Error (12152): Can't elaborate user hierarchy "pos_decoder:p2" File: C:/Users/Ziheng/Documents/EECS355/finalproject/game_top.vhd Line: 125
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 9 warnings
-    Error: Peak virtual memory: 673 megabytes
-    Error: Processing ended: Sun Feb 26 18:45:55 2017
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:21
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(34): object "hist3" assigned a value but never read File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(35): object "hist2" assigned a value but never read File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(36): object "hist1" assigned a value but never read File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at game_top.vhd(37): object "hist0" assigned a value but never read File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 37
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:p1" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 101
+Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:p1|keyboard:u1" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/ps2.vhd Line: 64
+Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:p1|oneshot:pulser" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/ps2.vhd Line: 74
+Info (12128): Elaborating entity "leddcd" for hierarchy "ps2:p1|leddcd:lcddcd0" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/PS2/ps2.vhd Line: 83
+Info (12128): Elaborating entity "pos_decoder" for hierarchy "pos_decoder:p2" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 125
+Warning (10540): VHDL Signal Declaration warning at pos_decoder.vhd(27): used explicit default value for signal "sig_pos_y1" because signal was never assigned a value File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/pos_decoder.vhd Line: 27
+Warning (10540): VHDL Signal Declaration warning at pos_decoder.vhd(28): used explicit default value for signal "sig_pos_x2" because signal was never assigned a value File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/pos_decoder.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at pos_decoder.vhd(29): used explicit default value for signal "sig_pos_y2" because signal was never assigned a value File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/pos_decoder.vhd Line: 29
+Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:p3" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/game_top.vhd Line: 138
+Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:p3|pixelGenerator:videoGen" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/VGA_top_level.vhd Line: 50
+Info (12128): Elaborating entity "colorROM" for hierarchy "VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/pixelGenerator.vhd Line: 54
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/colorROM.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/colorROM.vhd Line: 84
+Info (12133): Instantiated megafunction "VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/colorROM.vhd Line: 84
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "colorROM.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "8"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "width_a" = "30"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b481.tdf
+    Info (12023): Found entity 1: altsyncram_b481 File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/db/altsyncram_b481.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_b481" for hierarchy "VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:p3|VGA_SYNC:videoSync" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/VGA/VGA_top_level.vhd Line: 58
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "VGA_top_level:p3|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_b481:auto_generated|ALTSYNCRAM" File: C:/Users/Ziheng/Documents/GitHub/FPGA_FinalProject/db/altsyncram_b481.tdf Line: 32
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 450 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 90 output pins
+    Info (21061): Implemented 326 logic cells
+    Info (21064): Implemented 30 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Mon Feb 27 12:20:53 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:24
 
 
