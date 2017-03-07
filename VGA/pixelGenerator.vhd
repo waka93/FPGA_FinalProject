@@ -7,7 +7,7 @@ use work.graphic_const.all;
 entity pixelGenerator is
 	port(
 			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
-			pos_x1,pos_y1,pos_x2,pos_y2						: in integer;
+			frame											: in VGA_ARRAY;
 			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
 			red_out, green_out, blue_out					: out std_logic_vector(9 downto 0)
 		);
@@ -61,34 +61,14 @@ begin
 	begin
 			
 		if (rising_edge(clk)) then
-		--	tank 1
-			if(pixel_column_int > pos_x1  and pixel_column_int < (pos_x1 + TANK_WIDTH) and 
-				pixel_row_int < pos_y1 + TANK_HEIGHT) then
-				colorAddress <= color_red;
-			elsif(pixel_column_int > pos_x1 and (pixel_column_int + 640) < (pos_x1 + TANK_WIDTH) and
-				pixel_row_int < pos_y1 + TANK_HEIGHT) then
-				colorAddress <= color_red;
-			
-		--	tank 2
-			elsif(pixel_column_int > pos_x2 and pixel_column_int < (pos_x2 + TANK_WIDTH) and 
-				pixel_row_int > pos_y2) then
+			if frame(pixel_column_int,pixel_row_int) = "000" then
+				colorAddress <= color_white;
+			elsif frame(pixel_column_int,pixel_row_int) = "001" then
 				colorAddress <= color_blue;
-			elsif(pixel_column_int > pos_x2 and (pixel_column_int + 640) < (pos_x2 + TANK_WIDTH) and
-				pixel_row_int > pos_y2) then
-				colorAddress <= color_blue;	
-				
-		--	bullet 1
-			elsif()
-		
-		
---			if (pixel_row_int < 240 and pixel_column_int < 320) then
---				colorAddress <= color_green;
---			elsif (pixel_row_int >= 240 and pixel_column_int < 320) then
---				colorAddress <= color_yellow;
---			elsif (pixel_row_int < 240 and pixel_column_int >= 320) then
---				colorAddress <= color_red;
---			elsif (pixel_row_int >= 240 and pixel_column_int >= 320) then
---				colorAddress <= color_blue;
+			elsif frame(pixel_column_int,pixel_row_int) = "010" then
+				colorAddress <= color_red;
+			elsif (frame(pixel_column_int,pixel_row_int) = "011") or (frame(pixel_column_int,pixel_row_int) = "100") then
+				colorAddress <= color_black;
 			else
 				colorAddress <= color_white;
 			end if;
